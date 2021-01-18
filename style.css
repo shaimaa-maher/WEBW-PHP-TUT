@@ -1,0 +1,15 @@
+
+
+.main{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    
+}
+form{
+    display: inline;
+}
+.btns{
+    display: block;
+}
