@@ -6,10 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-
-
-
-
+  
 <?php 
 $msg ="Hello shaimaa, Lest's start php projects again^_^";
 
