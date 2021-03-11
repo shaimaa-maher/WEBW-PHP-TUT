@@ -8,7 +8,7 @@ if(isset($_POST['submit']))
     $min =5;
     $names= array("shaimaa","shrouq","mahmoud");
 
-    if( empty($_POST["username"]))
+    if( empty($_POST["username"])) 
     {
         echo "you should enter the name"."<br>";
     }
