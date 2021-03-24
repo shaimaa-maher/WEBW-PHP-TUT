@@ -3,7 +3,7 @@
 ?>
 <?php  include "includes/header.php"; ?>
 
-    
+     
 <div class="container">
     <div class="col-xs-6 col-lg-6  text-center">
         <form action="delete_data.php" method="POST"> 
@@ -14,7 +14,7 @@
                 <option selected> </option>
                     <?php
                     showAllData();
-                    ?>
+                    ?> 
                 </select>
             </div>
             <br><br>

@@ -10,8 +10,5 @@
         die("connection fail");
     }
 
- 
 
-
-
-?>
+?>  

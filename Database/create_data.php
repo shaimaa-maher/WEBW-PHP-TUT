@@ -4,9 +4,9 @@
 
 
 
-    <div class="container">
+    <div class="container"> 
         <div class="col-xs-6 col-lg-3">
-        <h1>Create User</h1>
+          <h1>Create User</h1>
             <form action="create_data.php" method="POST"> 
 
                 <div class="mb-3">

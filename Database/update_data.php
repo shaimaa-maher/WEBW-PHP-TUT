@@ -8,7 +8,7 @@
 
 <?php  include "includes/header.php"; ?>
 
-     <div class="container">
+    <div class="container">
     <div class="col-xs-6 col-lg-3">
         <h1>Update </h1>
         <form action="update_data.php" method="POST"> 

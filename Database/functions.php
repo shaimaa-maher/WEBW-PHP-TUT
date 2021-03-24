@@ -9,7 +9,7 @@ function showAllData(){
 
     if(!$result)
     { 
-        die('Query FAILD' . mysqli_error(1));
+        die('Query FAILD' . mysqli_error(1)); 
     }
 
     while($row = mysqli_fetch_assoc($result))
@@ -41,18 +41,16 @@ function read_data()
     }
 }
 
-
 function insertData()
 { 
      global $connection;
     if(isset($_POST['create']))
-    {   
+      {   
        
         if( empty($_POST["username"]))
         {
                 echo "you should enter the name"."<br>";
         }
-
         elseif( empty($_POST["password"]))
         {
             echo "you should enter the password"."<br>";
@@ -60,7 +58,17 @@ function insertData()
             //prepare the data in a variables: 
             $username = $_POST['username'];
             $password = $_POST['password'];
-        
+
+            //prevent sql injection
+            $username = mysqli_real_escape_string($connection,$username);
+            $password = mysqli_real_escape_string($connection,$password);
+
+            //Encrypt the password
+            $hashFormat= "$2x$10$";
+            $salt= "iwilldevelopeagreatweb";
+            $hashF_and_salt = $hashFormat . $salt;
+            $password = crypt($password, $hashF_and_salt);
+    
 
             //query to store the data into the database:
             $query = "INSERT INTO users(username,password) VALUE('$username','$password')";
@@ -73,7 +81,7 @@ function insertData()
                 echo "the user is inserted successfully!";
             }
         }
-    }  
+      }  
           
 }
 
